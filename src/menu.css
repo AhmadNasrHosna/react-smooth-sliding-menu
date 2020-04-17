@@ -1,0 +1,74 @@
+.c-flyout-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fb6846;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: auto;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c-flyout-menu.is-hidden {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.c-flyout-menu.is-visible {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+.c-flyout-menu.is-visible li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.c-flyout-menu li {
+  transition: transform 500ms ease-out,
+    opacity 1500ms ease;
+  transform: translateX(-500px);
+  opacity: 0;
+}
+
+.c-flyout-menu li:nth-of-type(2) {
+  transition-delay: 100ms, 300ms;
+}
+
+.c-flyout-menu li:nth-of-type(3) {
+  transition-delay: 200ms, 400ms;
+}
+
+.c-flyout-menu li:nth-of-type(4) {
+  transition-delay: 300ms, 500ms;
+}
+
+.c-flyout-menu li a {
+  display: inline-flex;
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem;
+  transition:
+    all 0.23s cubic-bezier(0, 1.26, 0.8, 1.28);
+  padding: 0.2em 0.4em;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .c-flyout-menu li a {
+    font-size: 4rem;
+  }
+}
+
+.c-flyout-menu li a:hover {
+  background: #fff;
+  color: hsl(11, 96%, 63%);
+  transform: scale(1.2)
+}

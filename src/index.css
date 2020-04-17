@@ -1,0 +1,55 @@
+body {
+  background-color: hsla(357, 100%, 80%, 1);
+  margin: 0;
+  color: #fff;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.65rem;
+  /* min-height: 100vh; */
+}
+
+ol li {
+  margin-bottom: 0.85rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: normal;
+  max-width: 18ch;
+  line-height: 1.1;
+  margin-bottom: 2.25rem;
+  font-size: 2.75rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 5.25rem;
+  }
+}
+
+p {
+  max-width: 44ch;
+  margin: 0;
+}
+
+@media (min-width: 48em) {
+  h1, p {
+    text-align: right;
+  }
+}
+
+.o-main {
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  place-content: end;
+}
+
+@media (min-width: 64em) {
+  .o-main {
+    padding: 3rem;
+    min-height: calc(100vh - 6rem);
+  }
+}
