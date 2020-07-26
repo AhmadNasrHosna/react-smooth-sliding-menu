@@ -1,3 +1,5 @@
+A totally awesome menu in React that smoothly animates in and out.
+
 ![React Smooth Sliding Menu](reactsmoothslidingmenuxl.gif "React Smooth Sliding Menu")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
